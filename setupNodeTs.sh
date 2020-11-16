@@ -14,3 +14,6 @@ npm i --save-dev webpack
 npm i --save-dev webpack-cli
 npm i --save-dev webpack-node-externals
 npm i --save-dev ts-loader
+# setup config
+npm i config
+npm i --save module-alias

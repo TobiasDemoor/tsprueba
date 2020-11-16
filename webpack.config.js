@@ -1,5 +1,12 @@
 const nodeExternals = require("webpack-node-externals");
 const path = require("path");
+const { baseUrl, paths } = require("./tsconfig.json").compilerOptions
+
+// generates the alias object from the paths in tsconfig.json
+const alias = {}
+for (let key in paths) {
+  alias[key] = path.resolve(__dirname, path.join(baseUrl, paths[key][0]))
+}
 
 module.exports = {
   entry: "./src/app.ts",
@@ -17,7 +24,8 @@ module.exports = {
   },
   resolve: {
     modules: ["src"],
-    extensions: [".ts", ".js"]
+    extensions: [".ts", ".js"],
+    alias
   },
   output: {
     filename: "app.js",
