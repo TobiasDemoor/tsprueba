@@ -1,10 +1,11 @@
-import express from "express";
+import express, {Application, Request, Response} from "express";
 import config from "@config";
+import PruebaModel from "model";
 // Create a new express app instance
-const app: express.Application = express();
+const app: Application = express();
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
+app.get("/", (req: Request<{}, {}, PruebaModel>, res) => {
+    res.send(req.body.n);
 });
 
 function a(i: number): number {
