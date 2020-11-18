@@ -1,4 +1,5 @@
 export interface IConfigApp {
+    port: number,
     n:  number
 }
 

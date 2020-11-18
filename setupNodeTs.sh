@@ -9,6 +9,7 @@ npm i --save-dev @types/express
 # setup watch and run
 npm i --save-dev nodemon
 npm i --save-dev ts-node
+npm i --save-dev tsconfig-paths
 # setup webpack
 npm i --save-dev webpack
 npm i --save-dev webpack-cli
